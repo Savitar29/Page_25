@@ -51,9 +51,11 @@
         line-height: 2rem;
     }
 
-    #truyencamhung_text,
-    .hocchat {
+    #truyencamhung_text {
         margin-left: 1% !important;
+    }
+    .hocchat {
+        margin-left: 2% !important;
     }
     .backdrop-blur-sm.mx-auto.rounded-2xl.w-full {
         padding: 0px 20px;

@@ -5,9 +5,6 @@
           padding-right: 32px;
      }
 
-     .shadow-sm.sticky.top-0.z-50{
-          height: 50px !important;
-     }
 
      /* Hero section */
      .lg\:w-3\/4 {
@@ -105,7 +102,7 @@
      }
 
      .hocchat {
-          margin-left: 2rem !important;
+          margin-left: 3rem !important;
      }
 
      .text-orange-500.font-medium.text-2xl.mb-12.leading-tight.drop-shadow-lg {
