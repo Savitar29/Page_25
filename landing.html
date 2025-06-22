@@ -345,7 +345,6 @@
 </head>
 
 <body class="overflow-x-hidden text-lg ">
-    <!-- Header -->
     <header class="shadow-sm sticky top-0 z-50" style="background-color: white; transition: top 0.3s ease-in-out;">
 
         <div class="container mx-auto px-6 py-4">
@@ -354,7 +353,6 @@
                 <div class="flex items-center space-x-2">
                     <img src="logo.png" alt="Logo" class="h-20" />
                 </div>
-                <!-- Menu căn giữa -->
                 <div class="flex-1 flex justify-center">
                     <div class="flex space-x-10">
                         <a href="#tongquan"
@@ -404,7 +402,6 @@
         <section class="hero-section min-h-screen flex items-center justify-center relative overflow-hidden"
             style="background: url('back.png') center center/cover no-repeat; opacity: 1; min-height: 90vh;">
             <div class="container mx-auto  flex flex-col lg:flex-row items-center justify-between relative z-10">
-                <!-- Cột trái: Text -->
                 <div class="lg:w-3/4 w-full text-left">
                     <h1
                         class="text-orange-600 font-extrabold text-4xl md:text-5xl lg:text-6xl mb-12 leading-tight drop-shadow-lg truyenthong" id="title">
@@ -429,7 +426,6 @@
                         </span>
                     </button>
                 </div>
-                <!-- Cột phải: Ảnh -->
                 <div class="lg:w-1/4 w-full flex justify-center lg:justify-end lg:mt-0 pl-8 h-full items-end ">
                     <img id="profile" src="profile.png" alt="" class="w-auto max-w-[500px]"
                         style="display: block; margin-top: 125px;">
@@ -733,14 +729,11 @@
                         <path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
-                <!-- Nội dung động -->
                 <div class="flex-1 course-slide-wrap" style="min-height:350px;">
                     <div id="course-slide"
                         class="flex items-center justify-center gap-12 rounded-3xl course-slide-anim slide-active">
-                        <!-- Nội dung sẽ được render bằng JS -->
                     </div>
                 </div>
-                <!-- Nút phải -->
                 <button id="course-next"
                     class="w-16 h-16 flex items-center justify-center rounded-full border-1 border-white bg-white/20 hover:bg-white/40 transition-all duration-200 shadow-lg">
                     <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" stroke-width="3"
@@ -931,7 +924,7 @@
                         style="margin: 0px 15px 15px 0px;">
                         <div class="flex flex-col gap-4">
                             <div class="backdrop-blur-sm mx-auto rounded-2xl w-full">
-                                <img src="new1.png" alt="" class="rounded-2xl h-60 w-full">
+                                <img src="new1.png" alt="" class="rounded-2xl ">
                                 <span
                                     class="absolute top-2 right-2 bg-green-500 text-white text-sm font-semibold px-3 py-1 rounded-lg">
                                     Sắp diễn ra
@@ -959,7 +952,7 @@
                         style="margin: 0px 15px 15px 0px;">
                         <div class="flex flex-col gap-4">
                             <div class="backdrop-blur-sm mx-auto rounded-2xl w-full">
-                                <img src="new2.png" alt="" class="rounded-2xl h-60 w-full">
+                                <img src="new2.png" alt="" class="rounded-2xl">
                                 <span
                                     class="absolute top-2 right-2 bg-red-500 text-white text-sm font-semibold px-3 py-1  rounded-lg">
                                     Đã diễn ra
@@ -983,7 +976,7 @@
                         style="margin: 0px 15px 15px 0px;">
                         <div class="flex flex-col gap-4">
                             <div class="backdrop-blur-sm mx-auto rounded-2xl w-full">
-                                <img src="new3.png" alt="" class="rounded-2xl h-60 w-full">
+                                <img src="new3.png" alt="" class="rounded-2xl">
                                 <span
                                     class="absolute top-2 right-2 bg-red-500 text-white text-sm font-semibold px-3 py-1  rounded-lg">
                                     Đã diễn ra
@@ -1009,7 +1002,7 @@
                         style="margin: 0px 15px 15px 0px;">
                         <div class="flex flex-col gap-4">
                             <div class="backdrop-blur-sm mx-auto rounded-2xl w-full">
-                                <img src="new4.png" alt="" class="rounded-2xl h-60 w-full">
+                                <img src="new4.png" alt="" class="rounded-2xl">
                                 <span
                                     class="absolute top-2 right-2 bg-red-500 text-white text-sm font-semibold px-3 py-1  rounded-lg">
                                     Đã diễn ra
@@ -1093,7 +1086,7 @@
     </footer>
 
     <script>
-        // Dữ liệu các slide
+
         const courseSlides = [
             {
                 video: 'vid_course_1.mp4',
@@ -1127,7 +1120,6 @@
                 desc: 'Khi thành phố đã ngủ yên, ở chợ Long Biên vẫn có những con người lặng thầm miệt mài mưu sinh – những người phụ nữ cửu vạn mang trong mình sức mạnh phi thường của sự bền bỉ. Sản phẩm là lời tri ân, là góc nhìn nhân văn về vẻ đẹp lao động – mộc mạc nhưng xúc động.',
                 poster: 'thumb_nhuncanhchim.png'
             }
-            // Thêm các slide khác nếu muốn
         ];
         let currentCourse = 0;
         let isSliding = false;
@@ -1136,14 +1128,12 @@
             isSliding = true;
             const wrap = document.querySelector('.course-slide-wrap');
             const oldSlide = document.getElementById('course-slide');
-            // Tạo slide mới
             const newSlide = document.createElement('div');
             newSlide.className = 'flex items-center justify-center gap-12 rounded-3xl course-slide-anim';
             newSlide.id = 'course-slide';
             if (direction === 1) newSlide.classList.add('slide-in-right');
             else if (direction === -1) newSlide.classList.add('slide-in-left');
             else newSlide.classList.add('slide-active');
-            // Nội dung
             const data = courseSlides[idx];
             newSlide.innerHTML = `
                 <div class='flex-shrink-0 w-[622px] h-[350px] flex items-center justify-center bg-black rounded-2xl'>
@@ -1171,7 +1161,6 @@
                     oldSlide.classList.add('slide-out-right');
                 }
             }, 10);
-            // Xóa slide cũ sau khi anim xong
             setTimeout(() => {
                 if (wrap.contains(oldSlide)) wrap.removeChild(oldSlide);
                 isSliding = false;
